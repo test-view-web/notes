@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         function outerFunction() {
+//     var myFunction = function(name) {
+//         this.name = name;
+//         console.log(this);
+//     };
+
+//     myFunction("Alice");
+// }
+
+// outerFunction();
+let outerFunction2 = {
+    sex : "0",
+    
+    innerFunction : function () {
+        var myFunction = (name) => {
+            this.name = name;
+            console.log(this.sex);
+        };
+        
+        myFunction("bob");
+    }
+
+    
+}
+
+outerFunction2.innerFunction();
+let outerFunction1 = {
+    sex : "0",
+    
+    innerFunction : function () {
+        var myFunction = function(name)  {
+            this.name = name;
+            console.log(this.sex);
+        };
+        
+        myFunction("alice");
+    }
+
+    
+}
+
+outerFunction1.innerFunction();
+
+
+
+
+
+        </script>
+</body>
+</html>
